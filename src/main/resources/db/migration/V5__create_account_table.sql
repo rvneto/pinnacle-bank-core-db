@@ -3,8 +3,8 @@ CREATE TABLE account (
     agency VARCHAR(4) NOT NULL,
     account VARCHAR(6) UNIQUE NOT NULL,
     balance DECIMAL(19, 2) DEFAULT 0.00,
-    client_id BIGINT NOT NULL,
+    customer_id BIGINT NOT NULL,
     creation_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (client_id) REFERENCES client(id)
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
