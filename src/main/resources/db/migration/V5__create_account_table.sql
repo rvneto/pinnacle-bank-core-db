@@ -1,6 +1,6 @@
 CREATE TABLE account (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    agency VARCHAR(4) NOT NULL,
+    branch VARCHAR(4) NOT NULL,
     account VARCHAR(6) UNIQUE NOT NULL,
     balance DECIMAL(19, 2) DEFAULT 0.00,
     customer_id BIGINT NOT NULL,
